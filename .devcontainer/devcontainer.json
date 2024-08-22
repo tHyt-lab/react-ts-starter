@@ -11,6 +11,9 @@
 					"source.removeUnusedImports": "explicit",
 					"source.organizeImports.biome": "explicit",
 					"source.fixAll.eslint": "explicit"
+				},
+				"[yaml]": {
+					"editor.defaultFormatter": "redhat.vscode-yaml"
 				}
 			},
 			"extensions": [
@@ -19,7 +22,8 @@
 				"mhutchie.git-graph",
 				"VisualStudioExptTeam.vscodeintellicode",
 				"formulahendry.auto-rename-tag",
-				"formulahendry.auto-close-tag"
+				"formulahendry.auto-close-tag",
+				"redhat.vscode-yaml"
 			]
 		}
 	},
