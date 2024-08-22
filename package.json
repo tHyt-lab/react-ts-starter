@@ -1,57 +1,41 @@
 {
-  "name": "vite-react-ts-starter",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "prepare": "husky install",
-    "test": "vitest",
-    "test:watch": "vitest watch"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.8.3",
-    "@swc/core": "^1.3.35",
-    "@swc/jest": "^0.2.24",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/react-hooks": "^8.0.1",
-    "@testing-library/user-event": "^14.4.3",
-    "@types/jest": "^29.4.0",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.51.0",
-    "@vitejs/plugin-react-swc": "^3.0.0",
-    "eslint": "^8.0.1",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-n": "^15.0.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-unused-imports": "^2.0.0",
-    "happy-dom": "^11.0.6",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.1.1",
-    "prettier": "^2.8.4",
-    "typescript": "^4.9.4",
-    "vite": "^4.1.5",
-    "vitest": "^0.34.4"
-  },
-  "lint-staged": {
-    "src/**/*.{js,ts,tsx}": [
-      "yarn eslint --max-warnings 0",
-      "yarn prettier -w"
-    ]
-  }
+	"name": "vite-react-ts-starter",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"prepare": "husky",
+		"test": "vitest",
+		"test:watch": "vitest watch"
+	},
+	"dependencies": {
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.8.3",
+		"@swc/core": "^1.7.14",
+		"@swc/jest": "^0.2.36",
+		"@testing-library/jest-dom": "^6.4.8",
+		"@testing-library/react": "^16.0.0",
+		"@testing-library/react-hooks": "^8.0.1",
+		"@testing-library/user-event": "^14.5.2",
+		"@types/jest": "^29.5.12",
+		"@types/react": "^18.3.4",
+		"@types/react-dom": "^18.3.0",
+		"@vitejs/plugin-react-swc": "^3.7.0",
+		"happy-dom": "^15.0.0",
+		"husky": "^9.1.5",
+		"lint-staged": "^15.2.9",
+		"prettier": "^3.3.3",
+		"typescript": "^5.5.4",
+		"vite": "^5.4.2",
+		"vitest": "^2.0.5"
+	},
+	"lint-staged": {
+		"src/**/*.{js,ts,tsx}": ["yarn biome format --fix"]
+	}
 }
