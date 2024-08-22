@@ -1,0 +1,33 @@
+name: PullRequest Review App
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  review_per_pr:
+    runs-on: ubuntu-latest
+    name: Review App
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache Bun dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Linter
+        run: npx biome lint
+
+      - name: Run tests
+        run: npm run test
