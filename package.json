@@ -33,7 +33,7 @@
 		"prettier": "^3.3.3",
 		"typescript": "^6.0.3",
 		"vite": "^8.0.14",
-		"vitest": "^3.0.5"
+		"vitest": "^4.1.7"
 	},
 	"lint-staged": {
 		"src/**/*.{js,ts,tsx}": ["yarn biome format --fix"]
